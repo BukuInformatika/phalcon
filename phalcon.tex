@@ -59,7 +59,7 @@
 
 %% How many levels of section head would you like to appear in the
 %% Table of Contents?
-%% 0= chapter titles, 1= section titles, 2= subsection titles, 
+%% 0= chapter titles, 1= section titles, 2= subsection titles,
 %% 3= subsubsection titles.
 %%==>>
 \setcounter{tocdepth}{2}
@@ -81,8 +81,8 @@
 
 %%%%%%% Demo of section head containing sample macro:
 %% To get a macro to expand correctly in a section head, with upper and
-%% lower case math, put the definition and set the box 
-%% before \begin{document}, so that when it appears in the 
+%% lower case math, put the definition and set the box
+%% before \begin{document}, so that when it appears in the
 %% table of contents it will also work:
 
 \newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
@@ -98,22 +98,20 @@
 \begin{document}
 
 
-\booktitle{Survey Methodology}
-\subtitle{This is the Subtitle}
+\booktitle{Belajar Phalcon}
+\subtitle{Buku Phalcon Untuk Pemula}
 
-\authors{Robert M. Groves\\
-\affil{Universitat de les Illes Balears}
-Floyd J. Fowler, Jr.\\
-\affil{University of New Mexico}
+\authors{Rolly M. Awangga\\
+\affil{Politeknik Pos Indonesia}
 }
 
-\offprintinfo{Survey Methodology, Second Edition}{Robert M. Groves}
+\offprintinfo{Belajar Phalcon, First Edition}{Rolly M. Awangga}
 
 %% Can use \\ if title, and edition are too wide, ie,
 %% \offprintinfo{Survey Methodology,\\ Second Edition}{Robert M. Groves}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
+%%
 \halftitlepage
 
 \titlepage
@@ -125,7 +123,7 @@ Survey Methodology / Robert M. Groves . . . [et al.].
 \    ``Wiley-Interscience."
 \    Includes bibliographical references and index.
 \    ISBN 0-471-48348-6 (pbk.)
-\    1. Surveys---Methodology.  2. Social 
+\    1. Surveys---Methodology.  2. Social
 \  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
 Series.\\
 
@@ -145,10 +143,10 @@ Japan
 State University, Tempe, Arizona
 
 \name{G. H. Bernstein,} Department of Electrical and
-Computer Engineering, University of Notre Dame, Notre Dame, South Bend, 
+Computer Engineering, University of Notre Dame, Notre Dame, South Bend,
 Indiana; formerly of
 Center for Solid State Electronics Research, Arizona
-State University, Tempe, Arizona 
+State University, Tempe, Arizona
 \end{contributors}
 
 \contentsinbrief
@@ -205,7 +203,7 @@ specified posterior CDF or from a sample from the posterior
 \begin{symbols}
 \term{A}Amplitude
 
-\term{\hbox{\&}}Propositional logic symbol 
+\term{\hbox{\&}}Propositional logic symbol
 
 \term{a}Filter Coefficient
 
@@ -222,7 +220,7 @@ specified posterior CDF or from a sample from the posterior
 {Harvard School of Public Health\\
 Boston, MA, USA}
 
-The era of modern \index{microelectronics}\index{microelectronics!modern} 
+The era of modern \index{microelectronics}\index{microelectronics!modern}
 began in 1958 with the invention of the
 integrated circuit by J.~S.~Kilby
  of Texas Instruments \cite{kilby}.
@@ -248,13 +246,13 @@ ABC {\cal DEF} \alpha\beta\Gamma\Delta\sum^{abc}_{def}
 {\bf ED-23,} 648 (1976).
 
 \bibitem{zhamming}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and 
-                 Engineers}, Chapter N-1, McGraw-Hill, 
+                 {\it Numerical Methods for Scientists and
+                 Engineers}, Chapter N-1, McGraw-Hill,
                  New York, 1962.
 
 \bibitem{zHu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
                Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152 
+                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
                      (1986).
 \end{chapreferences}
 \end{introduction}
@@ -323,11 +321,11 @@ Here is some normal text.
 Here is some normal text.
 Here is some normal text.
 
-\section{How to use a macro that has both upper and lower case parts: 
+\section{How to use a macro that has both upper and lower case parts:
 \copy\sectsavebox}
 See the top of this file where the definition and box were set.
 
-%% Sending different version of section to running head, 
+%% Sending different version of section to running head,
 %% so that the size of math is correct in running head:
 \markright{Sample macro \VT{\lowercase{xyz}} sent to running head}
 
@@ -445,7 +443,7 @@ The command \verb+\sidebyside{}{}+ works similarly for tables:
 
  \begin{table}[ht]
  \sidebyside{
-\caption{Table Caption} 
+\caption{Table Caption}
 \begin{tabular}{cccc}
 one&two&three&four\\
 a &little&sample&table
@@ -462,11 +460,11 @@ a &second little& sample&table
 
 
 When using \verb+\sidebyside+, one must
-use the cross referencing command \verb+\label{}+ after and  {\it outside} 
+use the cross referencing command \verb+\label{}+ after and  {\it outside}
  of \verb+\caption{}+:
 
 \begin{verbatim}
- \begin{table} 
+ \begin{table}
  \sidebyside{\caption{Table Caption}\label{tab1}
  first table}
  {\caption{Table Caption}\label{tab2} second table}
@@ -474,7 +472,7 @@ use the cross referencing command \verb+\label{}+ after and  {\it outside}
 \end{verbatim}
  or,
 \begin{verbatim}
- \begin{figure} 
+ \begin{figure}
  \sidebyside{\vskip<dimen>\caption{fig caption}\label{fig1}}
  {\vskip<dimen>\caption{fig caption}\label{fig2}}
  \end{figure}
@@ -490,17 +488,17 @@ This is a sample algorithm.
 \begin{algorithm}
 {\bf state\_transition algorithm} $\{$
 \        for each neuron $j\in\{0,1,\ldots,M-1\}$
-\        $\{$   
+\        $\{$
 \            calculate the weighted sum $S_j$ using Eq. (6);
 \            if ($S_j>t_j$)
-\                    $\{$turn ON neuron; $Y_1=+1\}$   
+\                    $\{$turn ON neuron; $Y_1=+1\}$
 \            else if ($S_j<t_j$)
-\                    $\{$turn OFF neuron; $Y_1=-1\}$   
+\                    $\{$turn OFF neuron; $Y_1=-1\}$
 \            else
 \                    $\{$no change in neuron state; $y_j$ remains %
-unchanged;$\}$ 
-\        $\}$   
-$\}$   
+unchanged;$\}$
+\        $\}$
+$\}$
 \end{algorithm}
 
 Here is some normal text.
@@ -559,7 +557,7 @@ This is the first item in the itemized list.
 \prob
 For Hooker's data, Problem 1.2, use the Box and Cox and Atkinson procedures to determine a appropriate transformation of PRES
 in the regression of PRES on TEMP. find $\hat\lambda$, $\tilde\lambda$,
-the score test, and the added variable plot for the score. 
+the score test, and the added variable plot for the score.
 Summarize the results.
 
 \prob
@@ -584,11 +582,11 @@ on the surface tension of liquid copper (Baes and Killogg, 1953).
 
 
 \subprob
-Find the transformations of $X$ and $Y$ sot that in the transformed scale 
+Find the transformations of $X$ and $Y$ sot that in the transformed scale
 the regression is linear.
 
 \subprob
-Assuming that $X$ is transformed to $\ln(X)$, which choice of $Y$ gives 
+Assuming that $X$ is transformed to $\ln(X)$, which choice of $Y$ gives
 better results,
 $Y$ or $\ln(Y)$? (Sclove, 1972).
 
@@ -607,7 +605,7 @@ linear model.
 \exer
 For Hooker's data, Exercise 1.2, use the Box and Cox and Atkinson procedures to determine a appropriate transformation of PRES
 in the regression of PRES on TEMP. find $\hat\lambda$, $\tilde\lambda$,
-the score test, and the added variable plot for the score. 
+the score test, and the added variable plot for the score.
 Summarize the results.
 
 \exer
@@ -632,11 +630,11 @@ on the surface tension of liquid copper (Baes and Killogg, 1953).
 
 
 \subexer
-Find the transformations of $X$ and $Y$ sot that in the transformed scale 
+Find the transformations of $X$ and $Y$ sot that in the transformed scale
 the regression is linear.
 
 \subexer
-Assuming that $X$ is transformed to $\ln(X)$, which choice of $Y$ gives 
+Assuming that $X$ is transformed to $\ln(X)$, which choice of $Y$ gives
 better results,
 $Y$ or $\ln(Y)$? (Sclove, 1972).
 
@@ -662,17 +660,17 @@ Here are some references: \cite{xkilby}, \cite{xberen}.
 
 
 \bibitem{xhamming}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and 
-                 Engineers}, Chapter N-1, McGraw-Hill, 
+                 {\it Numerical Methods for Scientists and
+                 Engineers}, Chapter N-1, McGraw-Hill,
                  New York, 1962.
 
 \bibitem{xHu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
                Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152 
+                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
                      (1986).
 
-\bibitem{xberen}A. Berenbaum, 
-B. W. Colbry, D.R. Ditzel, R. D Freeman, and 
+\bibitem{xberen}A. Berenbaum,
+B. W. Colbry, D.R. Ditzel, R. D Freeman, and
 K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
 {it Int. Solid State Circuit Conf., Dig. Tech. Pap.,} p. 34 (1987).
 \end{chapreferences}
@@ -780,17 +778,17 @@ structure of all the objects.
 {\bf ED-23,} 648 (1976).
 
 \bibitem{hamming}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and 
-                 Engineers}, Chapter N-1, McGraw-Hill, 
+                 {\it Numerical Methods for Scientists and
+                 Engineers}, Chapter N-1, McGraw-Hill,
                  New York, 1962.
 
 \bibitem{Hu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
                Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152 
+                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
                      (1986).
 
-\bibitem{beren}A. Berenbaum, 
-B. W. Colbry, D.R. Ditzel, R. D Freeman, and 
+\bibitem{beren}A. Berenbaum,
+B. W. Colbry, D.R. Ditzel, R. D Freeman, and
 K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
 {it Int. Solid State Circuit Conf., Dig. Tech. Pap.,} p. 34 (1987).
 \end{references}
@@ -802,17 +800,17 @@ K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
 {\bf ED-23,} 648 (1976).
 
 \bibitem[Ham62]{hamm}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and 
-                 Engineers}, Chapter N-1, McGraw-Hill, 
+                 {\it Numerical Methods for Scientists and
+                 Engineers}, Chapter N-1, McGraw-Hill,
                  New York, 1962.
 
 \bibitem[Hu86]{lee}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
                Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152 
+                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
                      (1986).
 
-\bibitem[Ber87]{berm}A. Berenbaum, 
-B. W. Colbry, D.R. Ditzel, R. D Freeman, and 
+\bibitem[Ber87]{berm}A. Berenbaum,
+B. W. Colbry, D.R. Ditzel, R. D Freeman, and
 K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
 {it Int. Solid State Circuit Conf., Dig. Tech. Pap.,} p. 34 (1987).
 
@@ -826,50 +824,50 @@ K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
 \printindex
 
 %%%% Making an index
-%% 
+%%
 %% 1. Make index entries, don't leave any spaces so that they
 %% will be sorted correctly.
-%% 
+%%
 %% \index{term}
 %% \index{term!subterm}
 %% \index{term!subterm!subsubterm}
-%% 
+%%
 %% 2. Run LaTeX several times to produce <filename>.idx
-%% 
+%%
 %% 3. On command line, type  makeindx <filename> which
-%% will produce <filename>.ind 
-%% 
+%% will produce <filename>.ind
+%%
 %% 4. Type \printindex to make the index appear in your book.
-%% 
-%% 5. If you would like to edit <filename>.ind 
+%%
+%% 5. If you would like to edit <filename>.ind
 %% you may do so. See docs.pdf for more information.
-%% 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%% Making Multiple Indices %%%%%%%%%%%%%%%%
-%% 1. 
+%% 1.
 %% \usepackage{multind}
 %% \makeindex{book}
 %% \makeindex{authors}
 %% \begin{document}
-%% 
+%%
 %% 2.
 %% % add index terms to your book, ie,
 %% \index{book}{A term to go to the topic index}
 %% \index{authors}{Put this author in the author index}
-%% 
+%%
 %% \index{book}{Cows}
 %% \index{book}{Cows!Jersey}
 %% \index{book}{Cows!Jersey!Brown}
-%% 
+%%
 %% \index{author}{Douglas Adams}
 %% \index{author}{Boethius}
 %% \index{author}{Mark Twain}
-%% 
-%% 3. On command line type 
-%% makeindex topic 
+%%
+%% 3. On command line type
+%% makeindex topic
 %% makeindex authors
-%% 
+%%
 %% 4.
 %% this is a Wiley command to make the indices print:
 %% \multiprintindex{book}{Topic index}
