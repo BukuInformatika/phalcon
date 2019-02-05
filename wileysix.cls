@@ -4,7 +4,7 @@
   %*                                                              *%
   %*     Prepared by Amy Hendrickson, TeXnology Inc.              *%
   %*                                                              *%
-  %*     TeXnology Inc.                                           *% 
+  %*     TeXnology Inc.                                           *%
   %*     www.texnology.com                                        *%
   %*     amyh@texnology.com                                       *%
   %*                                                              *%
@@ -16,15 +16,15 @@
   %% Global Parameters
   %% Listing
   %% Title Pages, Preface, Introduction
-  %% Part, Chapter, and Appendix Commands 
+  %% Part, Chapter, and Appendix Commands
   %% Counters
   %% Header Level Names
-  %% Section Commands 
-  %% Verse, Quote, Extract 
+  %% Section Commands
+  %% Verse, Quote, Extract
   %% Math
-  %% Figure and Table Captions 
-  %% Table of Contents, List of Figures, LOT 
-  %% Bibliography, References 
+  %% Figure and Table Captions
+  %% Table of Contents, List of Figures, LOT
+  %% Bibliography, References
   %% Footnotes
   %% Running Heads
   %% Fonts for Specific Places
@@ -70,7 +70,7 @@ This version is dated \currversion^^J^^J}
 \columnseprule 0pt
 
 \footnotesep 6.65pt
-\skip\footins 18pt 
+\skip\footins 18pt
 
 \floatsep 12pt plus 2pt minus 2pt
 \textfloatsep 20pt plus 2pt minus 4pt
@@ -86,7 +86,7 @@ This version is dated \currversion^^J^^J}
 \@dblfpsep 8pt plus 2fil
 \@dblfpbot 0pt plus 1fil
 
-\maxdepth=4pt %% 
+\maxdepth=4pt %%
 
 \oddsidemargin-18pt
 \advance\oddsidemargin-.5in
@@ -147,7 +147,7 @@ This version is dated \currversion^^J^^J}
 \newif\if@openbib
 \@openbibfalse
 \newif\if@openright
-\newif\if@mainmatter 
+\newif\if@mainmatter
 \newif\if@restonecol
 \newif\if@titlepage
 \newif\ifdraft
@@ -164,8 +164,8 @@ This version is dated \currversion^^J^^J}
 \newcommand{\indexname}{INDEX}
 \newcommand{\figurename}{Figure}
 \newcommand{\tablename}{Table}
-\newcommand{\partname}{PART}
-\newcommand{\chaptername}{Chapter}
+\newcommand{\partname}{BAB}
+\newcommand{\chaptername}{BAB}
 \newcommand{\appendixname}{Appendix}
 
 %%% <== end global parameters
@@ -327,7 +327,7 @@ This version is dated \currversion^^J^^J}
 \newcommand*{\descriptionlabel}[1]{\hspace\labelsep
                                 \normalfont\bfseries #1}
 
-%%% <<=== end of listing commands 
+%%% <<=== end of listing commands
 
 %% Title Pages, Preface, Introduction==>>
 
@@ -407,7 +407,7 @@ This version is dated \currversion^^J^^J}
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
 \hbox{\it #1}\hfill\par
@@ -455,11 +455,11 @@ This version is dated \currversion^^J^^J}
 
 \def\halftitlepage{\thispagestyle{empty}
   \vspace*{9pc}%
-  {\parindent \z@ 
+  {\parindent \z@
     \interlinepenalty\@M
 \LARGE
 \hyphenpenalty10000
-\bfseries\halftitlefont 
+\bfseries\halftitlefont
 \def\\ {\vskip1sp}
 \noindent\thetitle\vskip 1sp
 }
@@ -471,11 +471,11 @@ This version is dated \currversion^^J^^J}
 \vbox to\vsize{\vspace*{36pt}%
 \hrule height3pt
 \vskip6pc
-\parindent \z@ 
+\parindent \z@
 \interlinepenalty\@M
 \Huge
 \hyphenpenalty10000
-\bfseries\titlefont 
+\bfseries\titlefont
 \uppercase{\thetitle}
 \ifx\subtitle\empty\else
 {\vskip1pt\baselineskip22pt
@@ -491,7 +491,7 @@ This version is dated \currversion^^J^^J}
 \vfill
 \noindent{\includegraphics[width=1.7in]{wileylogo}}
 \vskip-8pt
-{\wileyfont A JOHN WILEY \& SONS, INC., PUBLICATION}
+{\wileyfont Kreatif Industri Nusantara}
 \vskip24pt}\newpage}
 
 \def\affil#1{{\affilfont #1}\vskip18pt}
@@ -522,10 +522,10 @@ This version is dated \currversion^^J^^J}
     \markboth{}{}
   {
 \vglue36pt
-\parindent \z@ 
+\parindent \z@
  \interlinepenalty\@M
 \Large
-{\parindent \z@ 
+{\parindent \z@
 \partnumberfont
 \partname~\Roman{part}}
 \hfill\vrule depth12pt width0pt
@@ -534,7 +534,7 @@ This version is dated \currversion^^J^^J}
 \hyphenpenalty10000
 \raggedright
 \parfillskip=0pt
-\LARGE\baselineskip=24pt\boldmath\bfseries\partfont 
+\LARGE\baselineskip=24pt\boldmath\bfseries\partfont
 \uppercase{#2}\vskip1pc
 \hrule height 1pt
 \vskip7pc}}}
@@ -678,10 +678,10 @@ This version is dated \currversion^^J^^J}
                       \@afterheading
                     \lowercase{\global\c@footnote\savefootnotenumber}}
 
-\def\@makechapterhead#1{% 
+\def\@makechapterhead#1{%
 \vglue10pt
 \SpaceAboveChapterNumber=36pt
-  {\parindent \z@ 
+  {\parindent \z@
     \interlinepenalty\@M
 \Large
 \hbox to\textwidth{\hbox{\chapternumberfont CHAPTER
@@ -691,7 +691,7 @@ This version is dated \currversion^^J^^J}
 \hyphenpenalty10000
 \raggedright
 \parfillskip=0pt
-\LARGE\boldmath\bfseries\chaptertitlefont 
+\LARGE\boldmath\bfseries\chaptertitlefont
 #1\vskip1pc
 \hrule height 1pt
 \vskip7pc}}
@@ -736,7 +736,7 @@ This version is dated \currversion^^J^^J}
 }
 
 
-%%% <<=== end Chapter, Part, and Appendix Commands 
+%%% <<=== end Chapter, Part, and Appendix Commands
 
 
 %%% Counters ===>>
@@ -838,7 +838,7 @@ This version is dated \currversion^^J^^J}
                {\endlist}
 \let\extract\quotation
 \let\endextract\endquotation
-%% <<== end Verse, Quote, Extract 
+%% <<== end Verse, Quote, Extract
 
 
 %%% Math ===>>>
@@ -856,7 +856,7 @@ This version is dated \currversion^^J^^J}
 \else
 \vskip14pt{\centerline{\fbox{\vtop{\vskip-9pt\vskip1sp\advance\hsize-41pt #1\vskip-8pt}}}\vskip14pt}\fi}}
 
-%%% <<<=== end Math 
+%%% <<<=== end Math
 
 
 %%% Figure and Table Captions ==>>>
@@ -929,22 +929,22 @@ This version is dated \currversion^^J^^J}
 
 
 \def\@xfloat#1[#2]{%
-\def \@captype {#1}\def \@fps {#2}\@onelevel@sanitize \@fps 
-\def \reserved@b {!}\ifx \reserved@b \@fps \@fpsadddefault \else 
-\ifx \@fps \@empty \@fpsadddefault \fi \fi 
-\ifhmode \@bsphack \@floatpenalty -\@Mii \else \@floatpenalty -\@Miii \fi 
-\ifinner \@parmoderr \@floatpenalty \z@ 
-\else \@next \@currbox \@freelist {\@tempcnta \sixt@@n 
-\expandafter \@tfor \expandafter \reserved@a \expandafter :\expandafter 
-=\@fps \do {\if \reserved@a h\ifodd \@tempcnta \else \advance \@tempcnta \@ne 
-\fi \fi \if \reserved@a t\@setfpsbit \tw@ \global\settotoptrue\fi 
-\if \reserved@a b\@setfpsbit 4\fi 
-\if \reserved@a p\@setfpsbit 8\fi 
-\if \reserved@a !\ifnum \@tempcnta >15 
-\advance\@tempcnta -\sixt@@n\relax\fi \fi }\@tempcntb 
-\csname ftype@\@captype \endcsname \multiply \@tempcntb \@xxxii \advance 
-\@tempcnta \@tempcntb \global \count \@currbox \@tempcnta }\@fltovf \fi 
-\global \setbox \@currbox \color@vbox \normalcolor \vbox \bgroup 
+\def \@captype {#1}\def \@fps {#2}\@onelevel@sanitize \@fps
+\def \reserved@b {!}\ifx \reserved@b \@fps \@fpsadddefault \else
+\ifx \@fps \@empty \@fpsadddefault \fi \fi
+\ifhmode \@bsphack \@floatpenalty -\@Mii \else \@floatpenalty -\@Miii \fi
+\ifinner \@parmoderr \@floatpenalty \z@
+\else \@next \@currbox \@freelist {\@tempcnta \sixt@@n
+\expandafter \@tfor \expandafter \reserved@a \expandafter :\expandafter
+=\@fps \do {\if \reserved@a h\ifodd \@tempcnta \else \advance \@tempcnta \@ne
+\fi \fi \if \reserved@a t\@setfpsbit \tw@ \global\settotoptrue\fi
+\if \reserved@a b\@setfpsbit 4\fi
+\if \reserved@a p\@setfpsbit 8\fi
+\if \reserved@a !\ifnum \@tempcnta >15
+\advance\@tempcnta -\sixt@@n\relax\fi \fi }\@tempcntb
+\csname ftype@\@captype \endcsname \multiply \@tempcntb \@xxxii \advance
+\@tempcnta \@tempcntb \global \count \@currbox \@tempcnta }\@fltovf \fi
+\global \setbox \@currbox \color@vbox \normalcolor \vbox \bgroup
 \ifx\@captype\xtable
 \ifsettotop
 \vglue-6pt
@@ -1116,11 +1116,11 @@ This version is dated \currversion^^J^^J}
 \let\numberline\xnumberline
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-\chaptocfont 
-#1\nobreak\hfil \nobreak\hbox 
+\chaptocfont
+#1\nobreak\hfil \nobreak\hbox
 to\@pnumwidth{\hss\chaptocfont #2}\par
       \penalty\@highpenalty
     \endgroup
@@ -1135,11 +1135,11 @@ to\@pnumwidth{\hss\chaptocfont #2}\par
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-%\chaptocfont 
-#1\nobreak\hfil \nobreak\hbox 
+%\chaptocfont
+#1\nobreak\hfil \nobreak\hbox
 to\@pnumwidth{\hss #2}\par
       \penalty\@highpenalty
     \endgroup
@@ -1155,11 +1155,11 @@ to\@pnumwidth{\hss #2}\par
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
 \bf
-#1\nobreak\hfil \nobreak\hbox 
+#1\nobreak\hfil \nobreak\hbox
 to\@pnumwidth{\hss #2}\par
       \penalty\@highpenalty
     \endgroup
@@ -1169,16 +1169,16 @@ to\@pnumwidth{\hss #2}\par
 \def\l@achapter#1#2{%
   \ifnum \c@tocdepth >0
     \addpenalty{-\@highpenalty}%
-    \vskip 6pt 
+    \vskip 6pt
      \setlength\@tempdima{2.5em}%
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-\chaptocfont 
-#1\nobreak\hfil \nobreak\hbox 
+\chaptocfont
+#1\nobreak\hfil \nobreak\hbox
 to\@pnumwidth{\hss #2}\par
       \penalty\@highpenalty
     \endgroup
@@ -1397,7 +1397,7 @@ Instead write a standard LaTeX reference and use \string\cite
 }
  \def\@evenhead{\iftitle\else{\foliofont \thepage}\hskip1.5pc%
 \footnotesize\runningheadfont\MakeUppercase\leftmark\fi\hfill}
- \def\@oddhead{\hfill\iftitle\else{\footnotesize\runningheadfont 
+ \def\@oddhead{\hfill\iftitle\else{\footnotesize\runningheadfont
 \MakeUppercase\rightmark}\hskip1.5pc%
 \foliofont\thepage\fi}%
  \def\chaptermark##1{\markboth {\uppercase{##1}}{}}%
@@ -1412,14 +1412,14 @@ Instead write a standard LaTeX reference and use \string\cite
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Special Use Fonts
 %%
 
 %% Computer Modern font calls. These will be redefined
 %% if PostScript fonts are used.
 %%
-%% \documentclass{wileysix} 
+%% \documentclass{wileysix}
 %% \usepackage{w-bookps}
 %%  will use PostScript fonts.
 
@@ -1467,7 +1467,7 @@ Instead write a standard LaTeX reference and use \string\cite
 \font\partfont=\helvetica at 24pt
 \font\partnumberfont=\helveticabold at 14pt
 
-%% Chapter Title 
+%% Chapter Title
 \font\chapternumberfont=\helveticabold at 14pt
 \font\chaptertitlefont=\helvetica at 18pt
 
@@ -1477,7 +1477,7 @@ Instead write a standard LaTeX reference and use \string\cite
 \font\subsubsectionfont=\helveticaboldoblique at 10pt
 \font\paragraphfont=\helveticaoblique at 10pt
 
-%% Caption 
+%% Caption
 \font\fignumfont=\timesbold at 9pt
 \font\tabnumfont=\timesbold at 9pt
 \font\figtextfont=\timesroman at 9pt
@@ -1517,13 +1517,13 @@ Instead write a standard LaTeX reference and use \string\cite
 \def\rrelax{\relax}
 
 \def\pickupnewlett#1{\def\letter{#1}%
-\ifx\letter\saveast\unskip% 
-\let\go\relax \else%  
+\ifx\letter\saveast\unskip%
+\let\go\relax \else%
 \ifx\letter\rrelax{\bigscfont\ }%
-\let\go\pickupnewword\else% 
+\let\go\pickupnewword\else%
 \uppercase{\def\ucletter{#1}%  upper case letter
 \ifx\letter\ucletter%
-{\bigscfont#1}\else{\smscfont#1}\fi}%% 
+{\bigscfont#1}\else{\smscfont#1}\fi}%%
 \let\go\pickupnewlett\fi\fi\go}
 
 \def\pickupnewword#1 {\expandafter\pickupnewlett#1\relax}
@@ -1663,11 +1663,11 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 
 \def\fix{\ifcase\oldtime 0\or0\or0\or%
 0\or0\or0\or0\or0\or0\or0\fi}
-\def\fixtiming{\ifcase\timing 0\or0\or0\or% 
+\def\fixtiming{\ifcase\timing 0\or0\or0\or%
 0\or0\or0\or0\or0\or0\or0\fi}
-\newcount\timing 
+\newcount\timing
 \newcount\hourcount
-\newcount\oldtime 
+\newcount\oldtime
 
 \def\realtime{\timing=\time \oldtime=\time
 \ifnum\timing>60 \divide\timing by 60
@@ -1749,7 +1749,7 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 \def\sidebysidesubprob#1#2{\centerline{\vtop{\hsize=.475\textwidth
 \subprob #1}\hfill\vtop{\hsize=.475\textwidth \subprob #2}}}
 
-%%%% <<==  end of problem set macros 
+%%%% <<==  end of problem set macros
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Exercises
@@ -1773,7 +1773,7 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 
 
 
-%%%% <<==  end of exercise macros 
+%%%% <<==  end of exercise macros
 
 
 \pagenumbering{roman}
@@ -1782,17 +1782,17 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 
 %%%%%
 %%%% side by side
-%%%% to use: 
+%%%% to use:
 % \begin{figure or table} \sidebyside{}{} \end{figure or table}
 %
-% \begin{table} 
+% \begin{table}
 % \sidebyside{\caption{table caption} first table}
 % {\caption{table caption} second table}
 % \end{table}
 
 % or
 
-% \begin{figure} 
+% \begin{figure}
 % \sidebyside{\vskip<dimen>\caption{fig caption}}
 % {\vskip<dimen>\caption{fig caption}}
 % \end{figure}
@@ -1800,7 +1800,7 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 %% To label for cross referencing, use \label after and <outside> of
 %% \caption{}
 
-% \begin{table} 
+% \begin{table}
 % \sidebyside{\caption{table caption}\label{tab1}
 % first table}
 % {\caption{table caption}\label{tab2} second table}
@@ -1808,7 +1808,7 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 
 % or
 
-% \begin{figure} 
+% \begin{figure}
 % \sidebyside{\vskip<dimen>\caption{fig caption}\label{fig1}}
 % {\vskip<dimen>\caption{fig caption}\label{fig2}}
 % \end{figure}
@@ -1820,7 +1820,7 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 \advance\hsize by -.5\columnsep
 \parindent=0pt
 \centering
- 
+
 #1\vskip1sp}\hskip\columnsep\vtop{\hsize=.5\textwidth%
 \advance\hsize by -.5\columnsep
 \parindent=0pt
@@ -1833,10 +1833,10 @@ D R A F T\hfill\today, \realtime\hfill D R A F T\global\titlefalse\vss}}
 \vbox to\textheight\bgroup\vfill\obeylines\obeyspaces\xcopyrightpage}
 
 \def\xcopyrightpage#1#2\end#3{\scriptsize\parindent=0pt
-Copyright \copyright{#1} by John Wiley \& Sons, Inc. All rights reserved.
+Copyright \copyright{#1} by Kreatif Industri Nusantara. All rights reserved.
 \vskip6.5pt
-Published by John Wiley \& Sons, Inc., Hoboken, New Jersey.\\
-Published simultaneously in Canada.
+Published Kreatif Industri Nusantara, Bandung.\\
+Published simultaneously in Indonesia.
 \vskip6.5pt
 
 No part of this publication may be reproduced, stored in a retrieval
@@ -1875,7 +1875,7 @@ however, may not be available in electronic format.
 #2
 Printed in the United States of America.\\
 
-10\ \ 9\ \ 8\ \ 7\ \ 6\ \ 5\ \  4\ \ 3\ \ 2\ \ 1 
+10\ \ 9\ \ 8\ \ 7\ \ 6\ \ 5\ \  4\ \ 3\ \ 2\ \ 1
 \vskip24pt
 \egroup\let\@badend\relax\endgroup}
 
@@ -1908,8 +1908,7 @@ volume.} \vskip24pt\egroup
 \advance\hsize -10pt \raggedright
 \footnotesize{\it #1. }\\{By #2}
 \noindent\hbox{\footnotesize
-Copyright \copyright\ \thecopyrightyear\ John Wiley \&
-Sons, Inc.}}}
+Copyright \copyright\ \thecopyrightyear\ Kreatif Industri Nusantara}}}
 
 
 \def\offprintinfo#1#2{
@@ -1917,20 +1916,20 @@ Sons, Inc.}}}
 \dofnote{#1}{#2}
 \egroup}}
 
-\def\x@makefntext#1{    
+\def\x@makefntext#1{
 \kern-3\p@
 \hrule\@width.4\columnwidth
 \kern2.6\p@
 \vrule height 9pt width0pt \relax
 #1}
 
-\def\offprintinfoerror{\typeout{^^J^^J 
+\def\offprintinfoerror{\typeout{^^J^^J
 !! Please enter {\string\offprintinfo\string{(Title,
-Edition)\string}\string{(Author)\string}^^J at the beginning of your 
+Edition)\string}\string{(Author)\string}^^J at the beginning of your
 document.!!^^J^^J}}
 \bgroup
 \x@makefntext{Please enter {\tt \string\offprintinfo\string{(Title,
-Edition)\string}\string{(Author)\string}\newline at the beginning of your 
+Edition)\string}\string{(Author)\string}\newline at the beginning of your
 document.\vrule depth8pt width0pt}\egroup}}
 
 
@@ -2032,10 +2031,10 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 \global\titletrue\dooffprintinfo
 \global\@mainmattertrue% <<===
 \gdef \thepage {\csname @arabic\endcsname \c@page }
-%% To fix includeonly numbering bug: ====>> 
+%% To fix includeonly numbering bug: ====>>
 \if@partsw\else
 \iffirstappendix\setcounter{chapter}{0}\fi
-\global\firstappendixfalse\fi% 
+\global\firstappendixfalse\fi%
 \refstepcounter{chapter}
 % <<====  end bug fix
 %% when using answers.sty,
@@ -2088,10 +2087,10 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 \global\titletrue\dooffprintinfo
 \global\@mainmattertrue% <<===
 \gdef \thepage {\csname @arabic\endcsname \c@page }
-%% To fix includeonly numbering bug: ====>> 
+%% To fix includeonly numbering bug: ====>>
 \if@partsw\else
 \iffirstappendix\setcounter{chapter}{0}\fi
-\global\firstappendixfalse\fi% 
+\global\firstappendixfalse\fi%
 \refstepcounter{chapter}
 % <<====  end bug fix
 %% when using answers.sty,
@@ -2111,7 +2110,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 \addcontentsline{toc}{achapter}{\thechapter\hskip2pt \ \quad Appendix}
 \else
 \chapter*{\vtop{\let\thanks\appthanks
- \baselineskip=30pt 
+ \baselineskip=30pt
 \leftskip=0pt \parindent=0pt
  Appendix \Alph{chapter}\vskip4pt
  #1}}
@@ -2121,7 +2120,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
  #1}
 \fi
 \def\one{#1}
-{\let\\ \ 
+{\let\\ \
 \ifx\one\empty
 \markboth{\uppercase{Appendix \thechapter}}{\uppercase{Appendix \thechapter}}
 \else
@@ -2154,7 +2153,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 
 
  \def\qed{\unskip\nobreak~~~\hfill\llap{%
- \vbox{\unskip\nobreak~~~\hfill\llap{\vrule height \slugheight width 
+ \vbox{\unskip\nobreak~~~\hfill\llap{\vrule height \slugheight width
  \slugwidth depth\slugdepth}}}}
 
 \def\sslug{\raise.5ex\hbox{\vrule width 4pt height4pt depth0pt}}
@@ -2176,7 +2175,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 \uppercase{Example} \thechapter.\the\c@exampnum}\hskip1em {\bf #1}%
 \vskip1sp
 \bgroup\nobreak\vskip1sp
-\leftskip=18pt 
+\leftskip=18pt
 \@afterindentfalse\@afterheading\nobreak}
 
 \def\yexample{\goodbreak\everypar={}\vskip12pt\global\advance\c@exampnum by 1
@@ -2184,7 +2183,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 \noindent\vrule depth14pt width0pt\exbox\ \ {\small\bf \uppercase{Example} \thechapter.\the\c@exampnum}
 \vskip1sp
 \bgroup
-\leftskip=18pt 
+\leftskip=18pt
 \@afterindentfalse\@afterheading\nobreak}
 
 \def\endexample{\vskip1sp\egroup\vskip6pt
@@ -2224,7 +2223,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
  \else\let\go\relax
  \ifvmode\vskip-\lastskip\fi
  \vskip8pt
- \noindent{\it Proof\/:}% 
+ \noindent{\it Proof\/:}%
 \enskip\relax\fi\ignorespaces\go}
 
  \def\usespecialterm[#1]{\ifvmode\vskip-\lastskip\fi
@@ -2241,7 +2240,7 @@ to2pc{\hskip3pt\hrulefill}\hss}\hss}%
 
 \def\solutionchap#1{\section*{\uppercase{Solutions for Chapter} #1}
 \openin1 ans#1.tex \ifeof1
-\typeout{^^J^^J No file ans#1.tex! 
+\typeout{^^J^^J No file ans#1.tex!
 ^^J\string\solutionchap\string{#1\string} requires ans#1.tex^^J
 Please
 make sure that you have entered
@@ -2252,7 +2251,7 @@ make sure that you have entered
 
 \def\solutionappendix#1{\section*{\uppercase{Solutions for Appendix} #1}
 \openin1 ans#1.tex \ifeof1
-\typeout{^^J^^J No file ans#1.tex! 
+\typeout{^^J^^J No file ans#1.tex!
 ^^J\string\solutionchap\string{#1\string} requires ans#1.tex^^J
 Please
 make sure that you have entered
@@ -2402,13 +2401,3 @@ obsolete.^^J Please use
 \string\begin\string{references\string}\string{<widest label>\string}\space instead.^^J Consult docs.pdf if you have questions.}\stop }
 
 \endinput
-
-
-
-
-
-
-
-
-
-
