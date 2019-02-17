@@ -359,16 +359,25 @@ Memerlukan XAMPP untuk instalasi Framework Phalcon.
  \item Step 1: Download Install lah file DLL (Dynamic Link Library) Phalcon di link https://phalconphp.com/en/download, sesuaikan file dll nya dengan konfigurasi versi XAMPP Anda.
  \item Step 2: Extract phalcon-php.dll file ke direktori /php/ext di folder XAMPP.
  \item Step 3: Edit file php.ini didalam folder /XAMPP/php/php.ini. Tambahkan "extension=php\_phalcon.dll" tanpa tanda kutip ke baris akhir php.ini.
- \item Step 4:
- \item Step 5:
- \item Step 6:
- \item Step 7:
- \item Step 8:
+\end{itemize}
+\begin{figure}[ht]
+\centerline{\includegraphics[width=0.5\textwidth]
+{figures/extension.JPG}}
+\caption{Apa yang harus di-edit di file php.ini}
+\label{labelgambar}
+\end{figure}
+\begin{itemize}
+ \item Step 4: Setelah itu, cek di localhost/dashboard/phpinfo.php, akan terdaftar library phalcon disana.
+ \item Step 5: Set Path Variable nya dengan menekan windows+R di keyboard, lalu ketikkan "sysdm.cpl SystemProperties" tanpa tanda kutip, masuk tab advance, lalu enviromental variables, klik new, dan masukkan path nya seperti gambar 2.2:
+ \item Step 6: Path variable ini membantu Anda agar bisa menjalankan Phalcon Framework via cmd, terutama jika ingin membuat project yang baru, terlihat di Gambar 2.3:
+ \item Step 7: Setelah masuk cmd, ketikkan command dibawah ini:
  \end{itemize}
- 
-  \includegraphics[scale=0.8]{extension}
-  
-  Gambar dari Step 2: Yang harus ditambahkan di file php.ini
+ \begin{verbatim}
+phalcon create-project <project-name> 
+\end{verbatim}
+ \begin{itemize}
+ \item Step 8: Project berhasil dibuat! masuk ke URL localhost/namaprojectanda
+ \end{itemize}
 
 
 \chapter{Second Edited Book Sample Chapter Title}
