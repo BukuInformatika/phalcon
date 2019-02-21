@@ -24,6 +24,13 @@
 % 6x9
 \documentclass{wileySix}
 
+\makeatletter
+\def\endthebibliography{%
+  \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist
+}
+\makeatother
+
 \usepackage{graphicx}
 \usepackage{array}
 \usepackage{listings}
@@ -120,17 +127,7 @@
 
 
 \begin{copyrightpage}{2007}
-Survey Methodology / Robert M. Groves . . . [et al.].
-\       p. cm.---(Wiley series in survey methodology)
-\    ``Wiley-Interscience."
-\    Includes bibliographical references and index.
-\    ISBN 0-471-48348-6 (pbk.)
-\    1. Surveys---Methodology.  2. Social
-\  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
-Series.\\
-
-HA31.2.S873 2007
-001.4'33---dc22                                             2004044064
+\input{info/copyrightpage}
 \end{copyrightpage}
 
 
@@ -138,17 +135,7 @@ HA31.2.S873 2007
 \dedication{To my parents}
 
 \begin{contributors}
-\name{Masayki Abe,} Fujitsu Laboratories Ltd., Fujitsu Limited, Atsugi,
-Japan
-
-\name{L. A. Akers,} Center for Solid State Electronics Research, Arizona
-State University, Tempe, Arizona
-
-\name{G. H. Bernstein,} Department of Electrical and
-Computer Engineering, University of Notre Dame, Notre Dame, South Bend,
-Indiana; formerly of
-Center for Solid State Electronics Research, Arizona
-State University, Tempe, Arizona
+\input{info/contributors}
 \end{contributors}
 
 \contentsinbrief
@@ -158,225 +145,40 @@ State University, Tempe, Arizona
 
 
 \begin{foreword}
-This is the foreword to the book.
+\input{info/foreword}
 \end{foreword}
 
 \begin{preface}
-This is an example preface.
-This is an example preface.
-This is an example preface.
-This is an example preface.
-
-\prefaceauthor{R. K. Watts}
-\where{Durham, North Carolina\\
-September, 2007}
-
+\input{info/preface}
 \end{preface}
 
 
 \begin{acknowledgments}
-From Dr.~Jay Young, consultant from Silver Spring, Maryland, I received
-the initial push to even consider writing this book. Jay was a constant
-``peer reader'' and very welcome advisor durying this year-long process.
-
-
-To all these wonderful people I owe a deep sense of gratitude especially now
-that this project has been completed.
-\authorinitials{G. T. S.}
+\input{info/acknowledgements}
 \end{acknowledgments}
 
 \begin{acronyms}
-\acro{ACGIH}{American Conference of Governmental Industrial Hygienists}
-\acro{AEC}{Atomic Energy Commission}
-\acro{OSHA}{Occupational Health and Safety Commission}
-\acro{SAMA}{Scientific Apparatus Makers Association}
+\input{info/acronyms}
 \end{acronyms}
 
 \begin{glossary}
-\term{NormGibbs}Draw a sample from a posterior distribution
-of data with an unknown mean and variance using Gibbs sampling.
-
-\term{pNull}Test a one sided hypothesis from a numberically
-specified posterior CDF or from a sample from the posterior
-
-\term{sintegral}A numerical integration using Simpson's rule
+\input{info/glossary}
 \end{glossary}
 
 \begin{symbols}
-\term{A}Amplitude
-
-\term{\hbox{\&}}Propositional logic symbol
-
-\term{a}Filter Coefficient
-
-\bigskip
-
-\term{\mathcal{B}}Number of Beats
+\input{info/symbols}
 \end{symbols}
 
 \begin{introduction}
-
-%% optional, but if you want to list author:
-
-\introauthor{Catherine Clark, PhD.}
-{Harvard School of Public Health\\
-Boston, MA, USA}
-
-The era of modern \index{microelectronics}\index{microelectronics!modern}
-began in 1958 with the invention of the
-integrated circuit by J.~S.~Kilby
- of Texas Instruments \cite{kilby}.
-His first chip is shown in Fig.~I. For comparison,
-Fig.~I.2 shows a modern microprocessor chip, \cite{beren}.
-
-
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-
-\begin{equation}
-ABC {\cal DEF} \alpha\beta\Gamma\Delta\sum^{abc}_{def}
-\end{equation}
-
-
-\begin{chapreferences}{3.}
-\bibitem{zkilby}J. S. Kilby,
-``Invention of the Integrated Circuit,'' {\it IEEE Trans. Electron Devices,}
-{\bf ED-23,} 648 (1976).
-
-\bibitem{zhamming}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and
-                 Engineers}, Chapter N-1, McGraw-Hill,
-                 New York, 1962.
-
-\bibitem{zHu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
-               Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
-                     (1986).
-\end{chapreferences}
+\input{info/introduction}
 \end{introduction}
 
 
-\chapter[Phalcon - Overview]
-{Phalcon -\\ Overview}
-\section{Pengenalan}
-Phalcon diperkenalkan sebagai salah satu Framework PHP terbaru, yang dikembangkan oleh sekelompok pengembang yang antusias. Phalcon adalah Framework yang digabungkan secara longgar, yang berarti memungkinkannya bisa membuat komponen objek menempel seperti lem, berdasarkan kebutuhan aplikasi.
-
-Phalcon memberikan beberapa fitur yang unik sebagai keunggulan dibandingkan framework yang lain (baik framework tradisional atau yang sering dipakai) di pemrograman PHP. Diantaranya:
-
-\begin{itemize}
- \item Framework yang full-stack open source
-
- \item User hanya membutuhkan code yang lebih sedikit untuk mendapatkan keuntungan di beberapa komponen
-
- \item bisa dipakai untuk membuat framework independen seperti yang dibutuhkan. Contohnya, jika kita hanya membutuhkan komponen cache yang dimiliki Phalcon, kita bisa menggunakannya di aplikasi apapun baik yang dibuat PHP atau menggunakan framework lain.
-
- \item Di sisi developer, mereka memounyai konsep MVC (Model-View-Controller) dan ORM (Object-Relational Modeling), bekerja dengan mudahnya dalam pemrograman Phalcon.
- \end{itemize}
-
-\subsection{Performance}
-
-Perbedaan Framework Phalcon dengan Framework Yii dan Laravel \cite{prokofyeva2017analysis}.
-
-\begin{center}
- \begin{tabular}{ | m{2em} | m{3cm}| m{3cm} | m{3cm} }
- \hline
- - & Yii & Laravel & Phalcon \\ [0.5ex]
- \hline\hline
- Tipe dalam Proyek & Yii adalah spesialis membuat proyek skala besar seperti forums, portals, CMS, RESTful web services, dll. & Laravel biasa digunakan untuk aplikasi berbasis web, laravel terkenal karena sintaks nya yang sangat indah dan canggih & Phalcon diguakan untuk semua variasi proyek \\
- \hline
- Database yang Mendukung & Yii mendukung semua RDBMS dan non-RDBMS & Laravel mendukung semua RDBMS & Phalcon memberikan dukungan secara equal (sama) baik RDBMS maupun non-RDBMS \\
- \hline
- Bahasa Pemrograman & Framework Yii menggunakan bahasa pemrograman PHP saja & Laravel menggunakan bahasa pemrograman PHP dan mengikuti pattern MVC & Phalcon menggunakan bahasa pemrograman PHP dan C \\
- \hline
- Keterjangkauan & Yii cukup baik di gunakan di skala proyek kecil ke menengah & Laravel punya keterjangkauan yang tinggi dalam skala proyek & Phalcon cocok untuk proyek skala menengah \\
- \hline
- Performa & Sedikit lambat & Performa tinggi namun masih dibawah Phalcon & Performa Tinggi \\ [1ex]
- \hline
-\end{tabular}
-\end{center}
-
-
-\subsubsection{This is the subsubsection}
-Here is some text after the subsubsection.
-Here is some text after the subsubsection.
-Here is some text after the subsubsection.
-Here is some text after the subsubsection.
-
-\paragraph{This is the paragraph}
-Here is some normal text.
-Here is some normal text.
-Here is some normal text.
-Here is some normal text.
-
-\section{Tips On Special Section Heads}
-Here are some things you can do for a special
-section head.
-
-\section[This Version of Section Head will be sent Contents]
-{Break Long Section heads\\ with double backslash}
-Here is some normal text.
-Here is some normal text.
-Here is some normal text.
-
- \section[This show how to explicitly break lines
-\string\hfill\string\break\space in Table of Contents]
-{Here is a Section Title}
-See this section head for information on how to explicitly break lines in
-table of contents.
-
-\section{How to get \lowercase{lower case} in section head: \lowercase{$p$}$H$}
-Here is some normal text.
-Here is some normal text.
-Here is some normal text.
-
-\section{How to use a macro that has both upper and lower case parts:
-\copy\sectsavebox}
-See the top of this file where the definition and box were set.
-
-%% Sending different version of section to running head,
-%% so that the size of math is correct in running head:
-\markright{Sample macro \VT{\lowercase{xyz}} sent to running head}
-
-\section{Equation}
-
-For optimal vertical spacing, no blank lines before or after
-equations
-\begin{equation}
-\alpha\beta\Gamma\Delta
-\end{equation}
-as you see here.
-
+\chapter{Phalcon - Overview}
+\input{chapters/1}
 
 \chapter{Enviromental Setup}
-}
-
-\section{Aplikasi yang dibutuhkan}
-Memerlukan XAMPP untuk instalasi Framework Phalcon.
-\begin{itemize}
- \item Step 1: Download Install lah file DLL (Dynamic Link Library) Phalcon di link https://phalconphp.com/en/download, sesuaikan file dll nya dengan konfigurasi versi XAMPP Anda.
- \item Step 2: Extract phalcon-php.dll file ke direktori /php/ext di folder XAMPP.
- \item Step 3: Edit file php.ini didalam folder /XAMPP/php/php.ini. Tambahkan "extension=php\_phalcon.dll" tanpa tanda kutip ke baris akhir php.ini. Sesuai dengan gambar ~\ref{fig:extension}
-\end{itemize}
-\begin{figure}[h!]
-\centerline{\includegraphics[width=0.5\textwidth]
-{figures/extension.JPG}}
-\caption{Apa yang harus di-edit di file php.ini}
-\label{fig:extension}
-\end{figure}
-\begin{itemize}
- \item Step 4: Setelah itu, cek di localhost/dashboard/phpinfo.php, akan terdaftar library phalcon disana.
- \item Step 5: Set Path Variable nya dengan menekan windows+R di keyboard, lalu ketikkan "sysdm.cpl SystemProperties" tanpa tanda kutip, masuk tab advance, lalu enviromental variables, klik new, dan masukkan path nya:
- \item Step 6: Path variable ini membantu Anda agar bisa menjalankan Phalcon Framework via cmd, terutama jika ingin membuat project yang baru:
- \item Step 7: Setelah masuk cmd, ketikkan command seperti di ~\ref{lst:newproject}.
- \end{itemize}
-\lstinputlisting[caption=Command untuk cara menambah project baru,label={lst:newproject}]{src/newproject.tex}
- \begin{itemize}
- \item Step 8: Project berhasil dibuat! masuk ke URL localhost/namaprojectanda
- \end{itemize}
+\input{chapters/2}
 
 
 \chapter{Second Edited Book Sample Chapter Title}
@@ -803,26 +605,8 @@ structure of all the objects.
 
 \appendix{Alternate Reference Styles}
 
-\begin{references}{3.}
-\bibitem{prokofyeva2017analysis}Prokofyeva, Natalya and Boltunova, Victoria,
-``Analysis and Practical Application of PHP Frameworks in Development of Web Information Systems,'' {\it Procedia Computer Science,}
-{\bf 104,} 51--56 (2017).
-
-\bibitem{hamming}R. W. Hamming,
-                 {\it Numerical Methods for Scientists and
-                 Engineers}, Chapter N-1, McGraw-Hill,
-                 New York, 1962.
-
-\bibitem{Hu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
-               Study of Gate/Drain Offset in LDD MOSFETs''
-                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
-                     (1986).
-
-\bibitem{beren}A. Berenbaum,
-B. W. Colbry, D.R. Ditzel, R. D Freeman, and
-K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
-{it Int. Solid State Circuit Conf., Dig. Tech. Pap.,} p. 34 (1987).
-\end{references}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 
 
 %%%%%%%%%%%%%%%
