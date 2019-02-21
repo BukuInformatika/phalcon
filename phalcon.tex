@@ -24,6 +24,13 @@
 % 6x9
 \documentclass{wileySix}
 
+\makeatletter
+\def\endthebibliography{%
+  \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist
+}
+\makeatother
+
 \usepackage{graphicx}
 \usepackage{array}
 \usepackage{listings}
@@ -600,6 +607,7 @@ structure of all the objects.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+
 
 %%%%%%%%%%%%%%%
 %%  The default LaTeX Index
